@@ -18,21 +18,22 @@ public function authenticate(Request $request)
 {
     $credentials = $request->validate([
         'nama_pengguna' => 'required|string',
-        'kata_sandi' => 'required|string',
+        'kata_sandi'    => 'required|string',
     ]);
 
-    if (Auth::attempt(['username' => $credentials['nama_pengguna'], 'password' => $credentials['kata_sandi']])) {
+    if (Auth::attempt([
+        'username' => $credentials['nama_pengguna'],
+        'password' => $credentials['kata_sandi'],
+    ])) {
         $request->session()->regenerate();
-
-        if (Auth::check()) {
-            return redirect()->intended(route('dashboard'));
-        }
+        return redirect()->intended(route('dashboard'));
     }
 
     return back()->withErrors([
-        'nama_pengguna' => 'Percobaan login gagal. Pastikan password di database sudah di-hash.',
-    ]);
+        'nama_pengguna' => 'Nama pengguna atau kata sandi salah.',
+    ])->withInput($request->only('nama_pengguna'));
 }
+
     public function logout(Request $request)
     {
         Auth::logout();
