@@ -12,7 +12,7 @@ class KibCController extends Controller
 {
     public function index(Request $request)
     {
-        $query = KibC::with('barang');
+        $query = KibC::with('barang.sumberDana');
 
         if ($request->filled('search')) {
             $query->whereHas('barang', function ($q) use ($request) {

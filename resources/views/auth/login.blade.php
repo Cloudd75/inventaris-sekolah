@@ -21,7 +21,6 @@
     <div class="login-container">
         <div class="login-card">
             <h2 class="login-title">Masuk</h2>
-
             <form method="POST" action="{{ route('login.submit') }}">
                 @csrf
 

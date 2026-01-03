@@ -15,7 +15,7 @@ Route::post('/login', [LoginController::class, 'authenticate'])->name('login.sub
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])
-    ->middleware(['web', 'auth'])
+    ->middleware(['auth'])
     ->name('dashboard');
 
 Route::get('/profil', function () {

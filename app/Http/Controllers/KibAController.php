@@ -12,7 +12,7 @@ class KibAController extends Controller
 {
     public function index(Request $request)
     {
-        $query = KibA::with('barang');
+        $query = KibA::with('barang.sumberDana');
 
         if ($request->filled('search')) {
             $query->whereHas('barang', function ($q) use ($request) {

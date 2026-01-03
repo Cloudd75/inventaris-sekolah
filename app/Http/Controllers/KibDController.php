@@ -12,7 +12,7 @@ class KibDController extends Controller
 {
     public function index(Request $request)
     {
-        $query = KibD::with('barang');
+        $query = KibD::with('barang.sumberDana');
 
         if ($request->filled('search')) {
             $query->whereHas('barang', function ($q) use ($request) {

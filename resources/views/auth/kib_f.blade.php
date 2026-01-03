@@ -52,7 +52,7 @@
                         <td>{{ $item->barang->nama_barang ?? '-' }}</td>
                         <td>{{ $item->merk ?? '-' }}</td>
                         <td>{{ $item->tipe ?? '-' }}</td>
-                        <td>{{ $item->barang->sumber_dana ?? '-' }}</td>
+                        <td>{{ $item->barang->sumberDana->nama_sumber_dana ?? '-' }}</td>
                         <td>{{ $item->keadaan }}</td>
                         <td>{{ $item->barang->harga ?? '-' }}</td>
                         <td class="aksi">

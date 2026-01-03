@@ -57,7 +57,7 @@
                     <td>{{ $item->ukuran }}</td>
                     <td>{{ $item->bahan }}</td>
                     <td>{{ $item->keadaan }}</td>
-                    <td>{{ $item->barang->sumber_dana ?? '-' }}</td>
+                    <td>{{ $item->barang->sumberDana->nama_sumber_dana ?? '-' }}</td>
                     <td>{{ $item->barang->harga ?? '-' }}</td>
                     <td class="aksi">
                         <div class="aksi-wrapper">

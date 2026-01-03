@@ -1,9 +1,14 @@
+.page-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
 /* =========================
    CONTAINER BARANG MASUK
    ========================= */
 .barang-masuk-container {
     width: 100%;
-    max-width: 1200px;
     padding: 25px 30px;
 }
 
@@ -15,9 +20,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5px;
-    width: 100%;
+    margin-bottom: 18px;
 }
+
+/* =========================
+   FILTER (SAMAKAN PEMINJAMAN)
+   ========================= */
 
 .tahun-select {
     display: flex;
@@ -32,7 +40,14 @@
     border-radius: 8px;
     border: 2px solid #c7cce3;
     background: #eef1f9;
+    font-size: 14px;
+    cursor: pointer;
 }
+
+.tahun-select span {
+    white-space: nowrap;
+}
+
 
 /* Tombol */
 .button-group {
@@ -42,22 +57,19 @@
 
 .btn-blue {
     background: #3C5CA5;
-    padding: 10px 20px;
-    border: none;
+    padding: 10px 18px;
     border-radius: 10px;
+    border: none;
     color: white;
     cursor: pointer;
-    font-size: 15px;
 }
 
 .btn-green {
     background: #63C56D;
     padding: 10px 18px;
-    border: none;
     border-radius: 10px;
     color: white;
     cursor: pointer;
-    font-size: 15px;
 }
 
 .btn-blue:hover,
@@ -74,6 +86,7 @@
     border: 2px solid #d7dbee;
     border-radius: 18px;
     padding: 15px;
+    overflow-x: auto;
 }
 
 .table-in {
@@ -85,13 +98,13 @@
     background: #3C5CA5;
     color: white;
     padding: 12px;
-    font-size: 16px;
     text-align: left;
 }
 
 .table-in td {
     padding: 12px;
     border-bottom: 1px solid #ddd;
+    white-space: nowrap;
 }
 
 .table-in tr:nth-child(even) {

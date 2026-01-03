@@ -9,8 +9,9 @@
 <div class="top-row">
 
     {{-- FILTER --}}
-    <form method="GET" class="filter-bar">
-        <label>Tahun</label>
+    <form method="GET" style="display:flex; align-items:center; gap:10px;">
+        <div class="tahun-select">
+        <span>Tahun</span>
         <select name="tahun">
             @for ($t = date('Y'); $t >= date('Y') - 5; $t--)
                 <option value="{{ $t }}" {{ $tahun == $t ? 'selected' : '' }}>
@@ -18,20 +19,20 @@
                 </option>
             @endfor
         </select>
+        
 
-        <label>Jenis KIB</label>
+        <span>Jenis KIB</span>
         <select name="kib">
             <option value="all" {{ $filterKib == 'all' ? 'selected' : '' }}>
                 Semua
             </option>
-
             @foreach(['a','b','c','d','e','f'] as $k)
                 <option value="{{ $k }}" {{ $filterKib == $k ? 'selected' : '' }}>
                     KIB {{ strtoupper($k) }}
                 </option>
             @endforeach
         </select>
-
+        </div>
         <button type="submit" class="btn-blue">Filter</button>
     </form>
 
