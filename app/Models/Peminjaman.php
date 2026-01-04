@@ -23,7 +23,7 @@ class Peminjaman extends Model
 
     public function guru()
     {
-        return $this->belongsTo(Guru::class);
+        return $this->belongsTo(Guru::class, 'guru_id', 'id');
     }
 
     public function ruang()
@@ -33,7 +33,7 @@ class Peminjaman extends Model
 
     public function barang()
 {
-    return $this->belongsTo(Barang::class);
+    return $this->belongsTo(Barang::class, 'kode_barang', 'kode_barang');
 }
 
 }
