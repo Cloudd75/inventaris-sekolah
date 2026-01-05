@@ -18,23 +18,31 @@
     </div>
 
     <div class="top-row">
+    {{-- FILTER --}}
+    <form method="GET" style="display:flex; align-items:center; gap:10px;">
         <div class="tahun-select">
             <span>Tahun</span>
-            <select id="filterTahun">
+            <select name="tahun">
                 @php $currentY = date('Y'); @endphp
                 @for($y = $currentY; $y >= 2023; $y--)
-                    <option value="{{ $y }}" {{ $tahun == $y ? 'selected' : '' }}>{{ $y }}</option>
+                    <option value="{{ $y }}" {{ $tahun == $y ? 'selected' : '' }}>
+                        {{ $y }}
+                    </option>
                 @endfor
             </select>
         </div>
 
-        <div class="button-group">
-            <a href="{{ route('peminjaman.create') }}" class="btn-blue">+ Tambah</a>
-            <a href="{{ route('peminjaman.print', ['tahun' => $tahun]) }}" 
-               target="_blank" 
-               class="btn-green">Cetak</a>
-        </div>
+        <button type="submit" class="btn-blue">Filter</button>
+    </form>
+
+    <div class="button-group">
+        <a href="{{ route('peminjaman.create') }}" class="btn-blue">+ Tambah</a>
+        <a href="{{ route('peminjaman.print', ['tahun' => $tahun]) }}"
+           target="_blank"
+           class="btn-green">Cetak</a>
     </div>
+</div>
+
 
     <div class="table-wrapper-in">
         <table class="table-in" id="tablePinjam">
