@@ -25,7 +25,7 @@ class BarangMasuk extends Model
 
     public function guru()
     {
-        return $this->belongsTo(Guru::class);
+        return $this->belongsTo(Guru::class, 'guru_id', 'id');
     }
 
     public function ruang()

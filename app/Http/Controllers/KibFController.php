@@ -36,7 +36,7 @@ public function store(Request $request)
         'kode_barang' => [
             'required',
             'unique:barang,kode_barang',
-            'regex:/^KIBB[0-9]{3}$/'
+            'regex:/^KIBF[0-9]{3}$/'
         ],
         'nama_barang' => [
             'required',

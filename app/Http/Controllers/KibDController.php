@@ -85,6 +85,11 @@ class KibDController extends Controller
     public function update(Request $request, $kode_barang)
 {
     $request->validate([
+         'kode_barang' => [
+            'required',
+            'unique:barang,kode_barang',
+            'regex:/^KIBD[0-9]{3}$/'
+        ],
         'nama_barang' => [
                 'required',
                 'regex:/^[a-zA-Z\s]+$/'

@@ -36,7 +36,7 @@ class KibEController extends Controller
             'kode_barang' => [
             'required',
             'unique:barang,kode_barang',
-            'regex:/^KIBB[0-9]{3}$/'
+            'regex:/^KIBE[0-9]{3}$/'
         ],
             'nama_barang' => [
             'required',
