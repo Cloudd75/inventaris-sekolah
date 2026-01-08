@@ -66,7 +66,10 @@
                         <td>{{ $p->tanggal_peminjaman }}</td>
                         <td>{{ $p->tanggal_pesan }}</td>
                         <td>{{ $p->guru->nama ?? '-' }}</td>
-                        <td>{{ $p->kode_barang }} (KIB {{ strtoupper($p->jenis_kib) }})</td>
+                        <td>
+                            {{ $p->barang->nama_barang ?? '-' }}
+                            ({{ $p->kode_barang }} | KIB {{ strtoupper($p->jenis_kib) }})
+                        </td>
                         <td>{{ $p->jam_pemakaian }}</td>
                         <td>{{ $p->ruang->nama_ruangan ?? '-' }}</td>
                         <td>{{ $p->tanggal_pengembalian ?? '-' }}</td>

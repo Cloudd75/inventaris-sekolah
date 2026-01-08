@@ -14,7 +14,7 @@ class PeminjamanController extends Controller
     {
         $tahun = $request->get('tahun', date('Y'));
 
-        $data = Peminjaman::with(['guru', 'ruang'])
+        $data = Peminjaman::with(['barang', 'guru', 'ruang'])
             ->where('tahun', $tahun)
             ->orderBy('tanggal_peminjaman', 'desc')
             ->get();
