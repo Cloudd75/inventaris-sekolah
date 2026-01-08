@@ -1,4 +1,4 @@
-@extends('layouts.tambah-barang-masuk')
+@extends('layouts.barang-masuk')
 
 @section('title', 'Input Peminjaman | Sistem Inventaris')
 
@@ -24,7 +24,7 @@
                     <input type="date" name="tanggal_pesan" required>
                 </div>
 
-                                <div class="form-group">
+                    <div class="form-group">
                     <label>Guru Peminjam</label>
                     <select name="guru_id" required>
                         <option value="">-- Pilih Guru --</option>
