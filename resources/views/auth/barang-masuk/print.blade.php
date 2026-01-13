@@ -203,8 +203,8 @@
                         Kepala Sekolah
                     </div>
                     <div class="sign-box">
-                        <span class="name">Warmansyah, S.Pd</span>
-                        NIP. 19701231 199512 2 021
+                        <span class="name">Emanuela M. Igo, S.Pd</span>
+                        NIP. 19741224 200604 2 021
                     </div>
                 </td>
                 <td>
